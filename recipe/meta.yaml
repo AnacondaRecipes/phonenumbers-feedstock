@@ -22,6 +22,8 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
 
   run:
     - python
@@ -34,15 +36,20 @@ test:
     - phonenumbers.geodata
     - phonenumbers.shortdata
     - phonenumbers.tzdata
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/daviddrysdale/python-phonenumbers
   # license_file: No LICENSE in MANIFEST, local copy below
   license_file: '{{ RECIPE_DIR }}/LICENSE'
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   summary: "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
   dev_url: https://github.com/daviddrysdale/python-phonenumbers
+  doc_url: https://github.com/daviddrysdale/python-phonenumbers/blob/dev/README.md
 
 extra:
   recipe-maintainers:
