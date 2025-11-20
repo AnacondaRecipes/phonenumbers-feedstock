@@ -23,6 +23,9 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
+    - testwrapper.py
   imports:
     - phonenumbers
     - phonenumbers.carrierdata
@@ -32,6 +35,10 @@ test:
     - phonenumbers.tzdata
   commands:
     - pip check
+    - pytest -v tests/phonenumbertest.py
+  requires:
+    - pip
+    - pytest
 
 about:
   home: https://github.com/daviddrysdale/python-phonenumbers
