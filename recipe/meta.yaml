@@ -45,8 +45,8 @@ about:
   license_file: LICENSE
   license: Apache-2.0
   license_family: Apache
-  summary: "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
-  description: "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
+  summary: Python version of Google's common library for parsing, formatting, storing and validating international phone numbers.
+  description: Python version of Google's common library for parsing, formatting, storing and validating international phone numbers.
   dev_url: https://github.com/daviddrysdale/python-phonenumbers
   doc_url: https://github.com/daviddrysdale/python-phonenumbers/blob/dev/README.md
 
