@@ -1,5 +1,5 @@
 {% set name = "phonenumbers" %}
-{% set version = "9.0.18" %}
+{% set version = "9.0.36" %}
 
 package:
   name: {{ name|lower }}
@@ -7,18 +7,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5537c61ba95b11b992c95e804da6e49193cc06b1224f632ade64631518a48ed1
+  sha256: 60ca2a6870d2532d6e960105790e85e9d69270ede81746d10cf57f5e437b93ec
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+  skip: true  # [py<25]
 
 requirements:
   host:
     - python
     - pip
     - setuptools
-    - wheel
   run:
     - python
 
@@ -45,8 +45,8 @@ about:
   license_file: LICENSE
   license: Apache-2.0
   license_family: Apache
-  summary: "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
-  description: "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
+  summary: Python version of Google's common library for parsing, formatting, storing and validating international phone numbers.
+  description: Python version of Google's common library for parsing, formatting, storing and validating international phone numbers.
   dev_url: https://github.com/daviddrysdale/python-phonenumbers
   doc_url: https://github.com/daviddrysdale/python-phonenumbers/blob/dev/README.md
 
