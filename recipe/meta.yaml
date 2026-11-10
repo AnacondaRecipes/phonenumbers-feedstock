@@ -35,7 +35,7 @@ test:
     - phonenumbers.tzdata
   commands:
     - pip check
-    - pytest -v tests/phonenumbertest.py
+    - pytest -vv tests/phonenumbertest.py
   requires:
     - pip
     - pytest
